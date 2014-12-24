@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="myPortfolio">
+  <head>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+    <meta charset="utf-8">
+    <title>Gbolahan</title>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <div id="container">
+      <img id="front-image" src="image/bg.png">
+      <div id="home-content">
+        <h2>Software Artistry</h2>
+        <p id = "content_para">
+         “Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”<br />
+          Gbolahan Okerayi is a Lagos based Software Developer with a feel of Awesomeness in his creation.<br />
+          <img class="picture" src="image/gbolly1.jpg">
+        </p>
+      </div>
+    </div>
+    <div id="navbar">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#Portfolio">Portfolio</a></li>
+          <li><a href="#Testimonials">Testimonials</a></li> 
+          <li id="contact-button"><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr>
+    <div id="testimonial">
+      <h1>Testimonials</h1>
+      <p id="testimonial-text">See what top Developers are saying about me</p>
+      <div id="trainers-review">
+        <div class="trainers">
+          <div class="trainers-remarks">
+            <p>"Great web developers can be pretty difficult to find at times. Luckily I have Gbolahan as a trainee, he has developed many website/apps exactly to my very specific specifications. I couldn't have asked for more from a devloper and I highly recommend him."</p>
+            <p class="trainer-name">Bernard</p>
+            <p class="trainer-field">Phyton Guru</p>
+          </div>
+          <div class="trainer-pics">
+            <em class="tick"></em>
+            <img src="image/bernard.jpg" class="picture">
+          </div>
+        </div>
+
+        <div class="trainers">
+          <div class="trainers-remarks">
+            <p>"Gbolahan has really shown then desire to develope into successful Software Consultany. I assessed couple of his projects and he has been execellent. I have been very impressed with the results seen so far, and excited about future developments"
+            </p>
+            <p class="trainer-name">Ifeanyin</p>
+            <p class="trainer-field">JavaScript Lord</p>
+          </div>
+          <div class="trainer-pics">
+            <em class="tick"></em>
+            <img src="image/ifeayin.jpg" class="picture">
+          </div>
+        </div>
+
+        <div class="trainers">
+          <div class="trainers-remarks">
+            <p>"I closely monitored Gbolahan, he worked hard on several projects and has come out with series of wonderful projects with codes to behold... 'Sexy Codes i must say'!. No doubts, very soon, he's going to be one of the best around. The sky is the starting point for this consultant"</p>
+            <p class="trainer-name">Prosper Otemuyiwa</p>
+            <p class="trainer-field">Unicode(sexy-code)</p>
+          </div>
+          <div class="trainer-pics">
+            <em class="tick"></em>
+            <img src="image/prosper.jpg" class="picture">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about-section">
+      <div id="about-content">
+        <h3 id="header-about">About Gbolahan</h3>
+        <p id="about-para">Gbolahan is a Lagos based Software Consultant and works with Andela. Gbolahan's mission is to provide cost effective digital design services which are focused around providing the best possible return for our clients investment.</p>
+      </div>
+    </div>
+    <div id="portfolio">
+       <h3>Portfolio</h3>
+       <p id="portfolio-text" class="text">Check out some of my works</p>
+      <div id="content" ng-controller="portfolioCtrl">
+        <ul>
+          <li id="list" ng-repeat="repo in repos">
+            <div id="project-pictures">
+              <a href="{{ghPage}}{{repo.name}}"><img id="images" src="{{repo.imgSrc}}"></a>
+              <p><a ng-href="{{ghPage}}{{repo.name}}">{{repo.name}}</a></p>
+              <hr>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="contact-section">
+      <h1 id="contact-header">Contact Me</h1>
+      <div id="social-feeds">
+        <a href="gbolahan.okerayi@andela.co"><img src="image/mailto.png"></a>
+        <a href="www.facebook.com/ibroju"><img src="image/facebook.png"></a>
+        <a href="www.twitter.com/saynt_han"><img src="image/twitter.png"></a>
+        <a href="www.linkedin.com/"><img src="image/linkedin.png"></a>
+        <a href="https://plus.google.com/u/0/116445530492671282211/posts"><img src="image/google.png"></a>
+      </div>
+      <div>
+        <footer id="footer">Copyright 2014 Gbolahan Okerayi | Andela</footer>
+      </div>
+    </div>
+  </body>
+</html>
